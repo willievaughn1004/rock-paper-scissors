@@ -1,75 +1,76 @@
 const getPlayerChoice = () => {
-    return prompt("Choose between Rock, Paper, or Scissors!")
-}
 
+    let playerChoice = prompt("Choose between Rock, Paper, or Scissors!");
 
-// const getPlayerChoice = () => {
-//     return "Paper";
-// }
+    if (/rock|scissors|paper/gi.test(playerChoice)) {
+        return playerChoice;
+    } else {
+        alert("Try again. You must choice between Rock, Paper, or Scissors")
+        return getPlayerChoice();
+    }
+
+};
 
 const getComputerChoice = () => {
-    let gameArr = ['Rock', 'Paper', 'Scissors']
-    return gameArr[Math.floor(Math.random() * gameArr.length)];
-}
-
-// Maybe change what happens during a draw so that the process is rerun. Maybe. We'll see.
+  let gameArr = ["Rock", "Paper", "Scissors"];
+  return gameArr[Math.floor(Math.random() * gameArr.length)];
+};
 
 const playRound = (playerSelection, computerSelection) => {
 
-    console.log(playerSelection, computerSelection)
+  if (playerSelection.toLowerCase() === computerSelection.toLowerCase()) {
+    return "Draw! Go again!";
+  }
 
-if (playerSelection.toLowerCase() === computerSelection.toLowerCase()) {
-    return "Draw!"
-}
-
-if (/rock/gi.test(playerSelection)) {
+  if (/rock/gi.test(playerSelection)) {
     if (computerSelection === "Paper") {
-        return "You Lose! Paper beats Rock"
+      return "You Lose! Paper beats Rock";
     } else {
-        return "You Win! Rock beats Scissors"
+      return "You Win! Rock beats Scissors";
     }
-}
+  }
 
-if (/paper/gi.test(playerSelection)) {
+  if (/paper/gi.test(playerSelection)) {
     if (computerSelection === "Scissors") {
-        return "You Lose! Scissors beats Paper"
+      return "You Lose! Scissors beats Paper";
     } else {
-        return "You Win! Paper beats Rock"
+      return "You Win! Paper beats Rock";
     }
-}
+  }
 
-if (/scissors/gi.test(playerSelection)) {
+  if (/scissors/gi.test(playerSelection)) {
     if (computerSelection === "Rock") {
-        return "You Lose! Rock beats Scissors"
+      return "You Lose! Rock beats Scissors";
     } else {
-        return "You Win! Scissors beats Paper"
+      return "You Win! Scissors beats Paper";
     }
-}
-
-}
+  }
+};
 
 const game = (rounds) => {
-    let playerWins = 0;
-    
-        for (let i = rounds; i > 0; i--) {
+  let playerWins = 0;
+  let computerWins = 0;
 
-           if (/win/gi.test(playRound(getPlayerChoice(), getComputerChoice()))) {
-            playerWins++
+  for (let i = rounds; i > 0; i--) {
+    let round = playRound(getPlayerChoice(), getComputerChoice());
 
-        } 
-
-        }
-
-        
-    
-
-    console.log(playerWins);
-
-    if (playerWins > rounds / 2) {
-        return "You won best of five rounds!"
+    if (/win/gi.test(round)) {
+      alert(round);
+      playerWins++;
+    } else if (/lose/gi.test(round)) {
+      alert(round);
+      computerWins++;
     } else {
-        return "You lost best of five rounds!"
+      alert(round);
+      i++;
     }
-}
+  }
 
-console.log(game(5));
+  if (playerWins > computerWins) {
+    return "You won best of five rounds!";
+  } else if (playerWins === computerWins) {
+    return "You guys tied!";
+  } else {
+    return "You lost best of five rounds!";
+  }
+};
