@@ -1,5 +1,11 @@
+// const getPlayerChoice = () => {
+//     return prompt("Choose between Rock, Paper, or Scissors!")
+// }
 
-let playerPrompt = prompt();
+
+const getPlayerChoice = () => {
+    return "Paper";
+}
 
 const getComputerChoice = () => {
     let gameArr = ['Rock', 'Paper', 'Scissors']
@@ -38,12 +44,28 @@ if (/scissors/gi.test(playerSelection)) {
 
 }
 
-const game = () => {
+const game = (rounds) => {
     let playerWins = 0;
 
-    for (let i = 5; i > 0; i--) {
-        console.log(playerPrompt, getComputerChoice())
+        console.log(playRound(getPlayerChoice(), getComputerChoice()))
+        console.log(/win/gi.test(playRound(getPlayerChoice(), getComputerChoice())))
+
+        for (let i = rounds; i > 0; i--) {
+            
+        }
+
+        if (/win/gi.test(playRound(getPlayerChoice(), getComputerChoice()))) {
+            playerWins++
+        }
+    
+
+    console.log(playerWins);
+
+    if (playerWins > 0) {
+        return "You won best of five rounds!"
+    } else {
+        return "You lost best of five rounds!"
     }
 }
 
-game();
+console.log(game(5));
