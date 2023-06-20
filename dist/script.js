@@ -1,18 +1,22 @@
-// const getPlayerChoice = () => {
-//     return prompt("Choose between Rock, Paper, or Scissors!")
-// }
-
-
 const getPlayerChoice = () => {
-    return "Paper";
+    return prompt("Choose between Rock, Paper, or Scissors!")
 }
+
+
+// const getPlayerChoice = () => {
+//     return "Paper";
+// }
 
 const getComputerChoice = () => {
     let gameArr = ['Rock', 'Paper', 'Scissors']
     return gameArr[Math.floor(Math.random() * gameArr.length)];
 }
 
+// Maybe change what happens during a draw so that the process is rerun. Maybe. We'll see.
+
 const playRound = (playerSelection, computerSelection) => {
+
+    console.log(playerSelection, computerSelection)
 
 if (playerSelection.toLowerCase() === computerSelection.toLowerCase()) {
     return "Draw!"
@@ -46,22 +50,22 @@ if (/scissors/gi.test(playerSelection)) {
 
 const game = (rounds) => {
     let playerWins = 0;
-
-        console.log(playRound(getPlayerChoice(), getComputerChoice()))
-        console.log(/win/gi.test(playRound(getPlayerChoice(), getComputerChoice())))
-
+    
         for (let i = rounds; i > 0; i--) {
-            
+
+           if (/win/gi.test(playRound(getPlayerChoice(), getComputerChoice()))) {
+            playerWins++
+
+        } 
+
         }
 
-        if (/win/gi.test(playRound(getPlayerChoice(), getComputerChoice()))) {
-            playerWins++
-        }
+        
     
 
     console.log(playerWins);
 
-    if (playerWins > 0) {
+    if (playerWins > rounds / 2) {
         return "You won best of five rounds!"
     } else {
         return "You lost best of five rounds!"
