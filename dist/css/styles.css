@@ -4,6 +4,25 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 100svh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111720;
+  height: 35%;
+}
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Press Start 2P", cursive;
+  color: #fac650;
+}
+
 .game-choices {
   display: flex;
   flex-direction: row;

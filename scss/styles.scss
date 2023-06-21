@@ -1,15 +1,45 @@
+// Font-Family Variables
+
+$ff-roboto: "Roboto", sans-serif;
+$ff-pixel: "Press Start 2P", cursive;
+
+// Color Variables
+
+$header-background: #111720;
+$header-text: #fac650;
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100svh;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $header-background;
+  height: 35%;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: $ff-pixel;
+    color: $header-text;
+  }
 }
 
 .game-choices {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .scissors {
-    transform: rotate(90deg);
+  transform: rotate(90deg);
 }
-

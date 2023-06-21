@@ -3,31 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Javascript -->
     <script src="./script.js" defer></script>
+    <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/28f50c9793.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./css/styles.css">
-
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Rock Paper Scissors</title>
   </head>
   <body>
-    <header>Rock Paper Scissors</header>
+    <header>
+      <h1>Rock Paper Scissors</h1>
+    </header>
 
     <main>
       <div class="game-status">
         <h1>Choose your weapon!</h1>
+
         <p>First to score 5 points wins the game</p>
       </div>
       <div class="game-score">
         <div class="player-score">
-            <div class="symbol"></div>
-            <p>Player: <span id="player-score-count">0</span></p>
+          <div class="symbol"><i class="fa-solid fa-question"></i></div>
+          <p>Player: <span id="player-score-count">0</span></p>
         </div>
+
         <div class="computer-score">
-            <div class="symbol"></div>
-            <p>Computer: <span id="computerscore-count">0</span></p>
+          <div class="symbol"><i class="fa-solid fa-question"></i></div>
+          <p>Computer: <span id="computerscore-count">0</span></p>
         </div>
       </div>
       <div class="game-choices">
