@@ -67,12 +67,12 @@ const game = (rounds) => {
   }
 
   if (playerWins > computerWins) {
-    return "You won best of five rounds!";
+    alert("You won best of five rounds!");
   } else if (playerWins === computerWins) {
-    return "You guys tied!";
+    alert("You guys tied!");
   } else {
-    return "You lost best of five rounds!";
+    alert("You lost best of five rounds!");
   }
 };
 
-game();
+game(5);
