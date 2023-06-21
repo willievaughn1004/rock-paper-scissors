@@ -92,9 +92,6 @@ main {
 .game-choices button:hover {
   background-color: #4a4f57;
 }
-.game-choices #scissors {
-  transform: rotate(90deg);
-}
 
 footer {
   justify-self: center;

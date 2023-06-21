@@ -28,33 +28,33 @@
 
     <main>
       <div class="game-status">
-        <h1>Choose your weapon</h1>
+        <h1 id="round-status">Choose your weapon</h1>
 
-        <p>First to score 5 points wins the game</p>
+        <p id="round-message">First to score 5 points wins the game</p>
       </div>
       <div class="game-score">
         <div class="score">
-          <div class="symbol"><i class="fa-solid fa-question"></i></div>
+          <div class="player-symbol"><i class="fa-solid fa-question"></i></div>
 
-          <p>Player: <span>0</span></p>
+          <p>Player: <span id="player-score">0</span></p>
         </div>
 
         <div class="score">
-          <div class="symbol"><i class="fa-solid fa-question"></i></div>
+          <div class="computer-symbol"><i class="fa-solid fa-question"></i></div>
 
-          <p>Computer: <span>0</span></p>
+          <p>Computer: <span id="computer-score">0</span></p>
         </div>
       </div>
       <div class="game-choices">
-        <button id="rock">
+        <button id="Rock">
           <i class="fa-regular fa-hand-back-fist"></i>
         </button>
 
-        <button id="paper">
-          <i class="fa-regular fa-hand"> </i>
+        <button id="Paper">
+          <i class="fa-regular fa-hand"></i>
         </button>
 
-        <button id="scissors">
+        <button id="Scissors">
           <i class="fa-regular fa-hand-scissors"></i>
         </button>
       </div>
