@@ -75,4 +75,4 @@ const game = (rounds) => {
   }
 };
 
-game(5);
+// game(5);

@@ -1,1 +1,14 @@
-/*# sourceMappingURL=styles.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-choices {
+  display: flex;
+  flex-direction: row;
+}
+
+.scissors {
+  transform: rotate(90deg);
+}/*# sourceMappingURL=styles.css.map */

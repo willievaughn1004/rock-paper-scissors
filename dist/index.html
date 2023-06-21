@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./script.js" defer></script>
-    <title>Document</title>
-</head>
-<body>
-</body>
+    <script
+      src="https://kit.fontawesome.com/28f50c9793.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <header>Rock Paper Scissors</header>
+
+    <main>
+      <div class="game-status">
+        <h1>Choose your weapon!</h1>
+        <p>First to score 5 points wins the game</p>
+      </div>
+      <div class="game-score">
+        <div class="player-score">
+            <div class="symbol"></div>
+            <p>Player: <span id="player-score-count">0</span></p>
+        </div>
+        <div class="computer-score">
+            <div class="symbol"></div>
+            <p>Computer: <span id="computerscore-count">0</span></p>
+        </div>
+      </div>
+      <div class="game-choices">
+        <div class="rock"><i class="fa-regular fa-hand-back-fist"></i></div>
+        <div class="paper"><i class="fa-regular fa-hand"></i></div>
+        <div class="scissors"><i class="fa-regular fa-hand-scissors"></i></div>
+      </div>
+    </main>
+
+    <footer>
+      Copyright <i class="fa-regular fa-copyright"></i> 2023 willievaughn1004
+      <i class="fa-brands fa-github"></i>
+    </footer>
+  </body>
 </html>
