@@ -72,7 +72,7 @@ const game = (rounds) => {
     alert("You guys tied!");
   } else {
     alert("You lost best of five rounds!");
-    console.log("Woah")
+    console.log("Hey")
   }
 };
 
