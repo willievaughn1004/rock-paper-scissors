@@ -34,49 +34,49 @@ const playRound = (event) => {
   computerSymbol.innerHTML = computerSelection[1];
 
   if (playerSelection[0] === computerSelection[0]) {
-    roundStatus.innerText = "It's a tie!";
-    roundMessage.innerText = `${playerSelection[0]} ties with ${playerSelection[0]}`;
+    roundStatus.textContent = "It's a tie!";
+    roundMessage.textContent = `${playerSelection[0]} ties with ${playerSelection[0]}`;
     return;
   }
 
   if (playerSelection[0] === "Rock") {
     if (computerSelection[0] === "Paper") {
-      roundStatus.innerText = "You Lose!";
-      roundMessage.innerText = "Paper beats Rock";
-      computerScore.innerText++;
+      roundStatus.textContent = "You Lose!";
+      roundMessage.textContent = "Paper beats Rock";
+      computerScore.textContent++;
     } else {
-      roundStatus.innerText = "You Win!";
-      roundMessage.innerText = "Rock beats Scissors";
-      playerScore.innerText++;
+      roundStatus.textContent = "You Win!";
+      roundMessage.textContent = "Rock beats Scissors";
+      playerScore.textContent++;
     }
   }
 
   if (playerSelection[0] === "Paper") {
     if (computerSelection[0] === "Scissors") {
-      roundStatus.innerText = "You Lose!";
-      roundMessage.innerText = "Scissors beats Paper";
-      computerScore.innerText++;
+      roundStatus.textContent = "You Lose!";
+      roundMessage.textContent = "Scissors beats Paper";
+      computerScore.textContent++;
     } else {
-      roundStatus.innerText = "You Win!";
-      roundMessage.innerText = "Paper beats Rock";
-      playerScore.innerText++;
+      roundStatus.textContent = "You Win!";
+      roundMessage.textContent = "Paper beats Rock";
+      playerScore.textContent++;
     }
   }
 
   if (playerSelection[0] === "Scissors") {
     if (computerSelection[0] === "Rock") {
-      roundStatus.innerText = "You Lose!";
-      roundMessage.innerText = "Rock beats Scissors";
-      computerScore.innerText++;
+      roundStatus.textContent = "You Lose!";
+      roundMessage.textContent = "Rock beats Scissors";
+      computerScore.textContent++;
     } else {
-      roundStatus.innerText = "You Win!";
-      roundMessage.innerText = "Scissors beats Paper";
-      playerScore.innerText++;
+      roundStatus.textContent = "You Win!";
+      roundMessage.textContent = "Scissors beats Paper";
+      playerScore.textContent++;
     }
   }
 
-  if (parseInt(computerScore.innerText) === 5 || parseInt(playerScore.innerText) === 5) {
-    if (playerScore.innerText > computerScore.innerText) {
+  if (parseInt(computerScore.textContent) === 5 || parseInt(playerScore.textContent) === 5) {
+    if (playerScore.textContent > computerScore.textContent) {
       alert("You won!");
     } else {
       alert("You lost...");
@@ -84,10 +84,10 @@ const playRound = (event) => {
 
     playerSymbol.innerHTML = '<i class="fa-solid fa-question"></i>';
     computerSymbol.innerHTML = '<i class="fa-solid fa-question"></i>';
-    roundStatus.innerText = "Choose your weapon";
-    roundMessage.innerText = "First to score 5 points wins the game";
-    playerScore.innerText = 0;
-    computerScore.innerText = 0;
+    roundStatus.textContent = "Choose your weapon";
+    roundMessage.textContent = "First to score 5 points wins the game";
+    playerScore.textContent = 0;
+    computerScore.textContent = 0;
 
   }
 
