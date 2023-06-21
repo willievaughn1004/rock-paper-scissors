@@ -91,8 +91,6 @@ const playRound = (event) => {
 
   }
 
-  console.log(computerScore.innerText + playerScore.innerText)
-
 };
 
 // Event Listeners
