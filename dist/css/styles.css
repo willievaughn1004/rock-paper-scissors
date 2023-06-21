@@ -5,9 +5,12 @@
 }
 
 body {
-  height: 100svh;
+  display: grid;
+  grid-template-rows: 9rem 1fr auto;
   color: #ddd;
   font-family: "Roboto", sans-serif;
+  background-color: #222831;
+  height: 100svh;
 }
 
 header {
@@ -15,7 +18,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #111720;
-  height: 9rem;
+  height: 8.2rem;
 }
 header h1 {
   font-size: 2rem;
@@ -30,7 +33,6 @@ main {
   flex-direction: column;
   align-items: center;
   padding-top: 2.5rem;
-  height: 90%;
   background-color: #222831;
 }
 
@@ -49,7 +51,7 @@ main {
 .game-score {
   display: flex;
   flex-direction: row;
-  margin-top: 2rem;
+  margin: 3rem 0;
   gap: 5rem;
 }
 .game-score .score {
@@ -62,12 +64,40 @@ main {
 .game-score .score i {
   font-size: 6rem;
 }
+.game-score .score p {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 
 .game-choices {
   display: flex;
   flex-direction: row;
+  gap: 2.5rem;
+}
+.game-choices div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+  background-color: #393e46;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 1rem;
+}
+.game-choices div i {
+  color: #fac650;
+}
+.game-choices div:hover {
+  background-color: #4a4f57;
+}
+.game-choices .scissors {
+  transform: rotate(90deg);
 }
 
-.scissors {
-  transform: rotate(90deg);
+footer {
+  justify-self: center;
+}
+footer p {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
 }/*# sourceMappingURL=styles.css.map */
