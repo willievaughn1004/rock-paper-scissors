@@ -1,45 +1,49 @@
-const getPlayerChoice = () => {
+// Variables
 
-    let playerChoice = prompt("Choose between Rock, Paper, or Scissors!");
+const gameChoices = document.querySelectorAll(".game-choices");
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
 
-    if (/rock|scissors|paper/gi.test(playerChoice)) {
-        return playerChoice;
-    } else {
-        alert("Try again. You must choice between Rock, Paper, or Scissors")
-        return getPlayerChoice();
-    }
+// Functions
+
+const getPlayerChoice = (event) => {
+  const button = event.target.closest("button");
+  if (button) {
+    playRound(button.getAttribute("id"), getComputerChoice())
+  }
 
 };
 
 const getComputerChoice = () => {
-  let gameArr = ["Rock", "Paper", "Scissors"];
+  let gameArr = ["rock", "paper", "scissors"];
   return gameArr[Math.floor(Math.random() * gameArr.length)];
 };
 
 const playRound = (playerSelection, computerSelection) => {
-
-  if (playerSelection.toLowerCase() === computerSelection.toLowerCase()) {
+  
+  if (playerSelection === computerSelection) {
     return "Draw! Go again!";
   }
 
-  if (/rock/gi.test(playerSelection)) {
-    if (computerSelection === "Paper") {
+  if (playerSelection === "rock") {
+    if (computerSelection === "paper") {
       return "You Lose! Paper beats Rock";
     } else {
       return "You Win! Rock beats Scissors";
     }
   }
 
-  if (/paper/gi.test(playerSelection)) {
-    if (computerSelection === "Scissors") {
+  if (playerSelection === "paper") {
+    if (computerSelection === "scissors") {
       return "You Lose! Scissors beats Paper";
     } else {
       return "You Win! Paper beats Rock";
     }
   }
 
-  if (/scissors/gi.test(playerSelection)) {
-    if (computerSelection === "Rock") {
+  if (playerSelection === "scissors") {
+    if (computerSelection === "rock") {
       return "You Lose! Rock beats Scissors";
     } else {
       return "You Win! Scissors beats Paper";
@@ -75,4 +79,8 @@ const game = (rounds) => {
   }
 };
 
-// game(5);
+// Event Listeners
+
+gameChoices.forEach((choice) =>
+  choice.addEventListener("click", getPlayerChoice)
+);

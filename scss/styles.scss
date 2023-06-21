@@ -98,7 +98,7 @@ main {
 
   gap: 2.5rem;
 
-  div {
+  button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,6 +107,8 @@ main {
     height: 10rem;
     width: 10rem;
     border-radius: 1rem;
+    cursor: pointer;
+    border: none;
 
     i {
       color: $header-text;
@@ -117,7 +119,7 @@ main {
     }
   }
 
-  .scissors {
+  #scissors {
     transform: rotate(90deg);
   }
 }

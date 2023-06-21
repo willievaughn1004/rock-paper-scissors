@@ -74,7 +74,7 @@ main {
   flex-direction: row;
   gap: 2.5rem;
 }
-.game-choices div {
+.game-choices button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,14 +83,16 @@ main {
   height: 10rem;
   width: 10rem;
   border-radius: 1rem;
+  cursor: pointer;
+  border: none;
 }
-.game-choices div i {
+.game-choices button i {
   color: #fac650;
 }
-.game-choices div:hover {
+.game-choices button:hover {
   background-color: #4a4f57;
 }
-.game-choices .scissors {
+.game-choices #scissors {
   transform: rotate(90deg);
 }
 
