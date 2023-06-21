@@ -30,7 +30,7 @@ header {
   align-items: center;
 
   background-color: $header-background;
-  height: 35%;
+  height: 9rem;
 
   h1 {
     font-size: 2rem;
@@ -47,7 +47,7 @@ main {
   align-items: center;
   padding-top: 2.5rem;
 
-  height: 65%;
+  height: 90%;
   background-color: $main-background;
 }
 
@@ -69,6 +69,21 @@ main {
 .game-score {
   display: flex;
   flex-direction: row;
+  margin-top: 2rem;
+  gap: 5rem;
+
+  .score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    i {
+        font-size: 6rem;
+    }
+
+  }
 }
 
 .game-choices {
