@@ -74,3 +74,5 @@ const game = (rounds) => {
     return "You lost best of five rounds!";
   }
 };
+
+game();
